@@ -14,6 +14,7 @@ namespace ClienteYBancoC_.Dtos
         string fchAltaCliente = "9999/12/31";
         string fchBajaCliente = "9999/12/31";
         string indentificadorUsu = "aaaa1111";
+       
 
         public int Id { get => id; set => id = value; }
         public string Isban { get => isban; set => isban = value; }
@@ -22,7 +23,7 @@ namespace ClienteYBancoC_.Dtos
         public string FchBajaCliente { get => fchBajaCliente; set => fchBajaCliente = value; }
         public string IndentificadorUsu { get => indentificadorUsu; set => indentificadorUsu = value; }
 
-        public CuentaDto(int id, string isban, string swift, string fchAltaCliente, string fchBajaCliente, string indentificadorUsu)
+        public CuentaDto(int id, string isban, string swift, string fchAltaCliente, string fchBajaCliente, string indentificadorUsu, long idCliente)
         {
             this.id = id;
             this.isban = isban;
@@ -31,6 +32,7 @@ namespace ClienteYBancoC_.Dtos
             this.fchBajaCliente = fchBajaCliente;
             this.indentificadorUsu = indentificadorUsu;
         }
+
         public CuentaDto() { }  
 
         override
@@ -41,7 +43,7 @@ namespace ClienteYBancoC_.Dtos
                 "swift   " + this.swift +
                 "faecha de alta   " + this.fchAltaCliente +
                 "fecha de baja   " + this.fchBajaCliente +
-                "identificador de la ceunta con el usuaeio   " + this.indentificadorUsu;
+                "identificador de la ceunta con el usuario   " + this.indentificadorUsu;
                 return clieneteCuenta;
         }
     }

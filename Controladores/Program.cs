@@ -1,7 +1,5 @@
-﻿//dar alta una nueva cuenta bancaria ,
-//tiene que terner un campo que identifique al usuario de esa cuenta bancaria
-//id, isban, codigo switch del banco, a que cliente le pertenece esa cuenta bancaria , fecha alta y baja de la cuenta
-using ClienteYBancoC_;
+﻿using ClienteYBancoC_;
+using ClienteYBancoC_.Dtos;
 using ClienteYBancoC_.Servicios;
 
 namespace ClienteYBancoC_
@@ -10,8 +8,12 @@ namespace ClienteYBancoC_
     {
         static void Main(string[] args)
         {
+            List<ClienteDto> listaClientes = new List<ClienteDto>();
+            List<CuentaDto> listaCuenta = new List<CuentaDto>();
+
             menuI mi = new menuC();
             ClieneteI ci = new ClienteC();
+            CuentaI cuenta = new CuentaC();
             
             bool cerrarMenu = false;
             int recogido = mi.menuCl();
@@ -20,11 +22,15 @@ namespace ClienteYBancoC_
             {
                 switch (recogido) 
                 {
-                    case 1: cerrarMenu = true; break;
-                    case 2: ci.darAltaCliente(); break;
-                    case 3: 
-
-
+                    case 0: cerrarMenu = true; 
+                        break;
+                    case 1: ci.darAltaCliente(listaClientes);
+                        break;
+                    case 2: cuenta.darAltaCuenta(listaCuenta); 
+                        break; 
+                    default:
+                        Console.WriteLine("[INFO] - La opcion seleccionada no coincide con ninguna.");
+                        break;
                 }
 
             }
