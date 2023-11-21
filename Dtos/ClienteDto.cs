@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace ClienteYBancoC_.Dtos
 {
+    /// <summary>
+    /// clase donde se guarda la lista sobre los clientes creados
+    /// amd 2111223
+    /// </summary>
     internal class ClienteDto
     {
         long idCliente; //PK
@@ -26,6 +30,10 @@ namespace ClienteYBancoC_.Dtos
 
         string fchBajaCliente = "9999/12/31";
 
+        /// <summary>
+        /// metodo que contiene los getters y setters
+        /// amd 211123
+        /// </summary>
         public long IdCliente { get => idCliente; set => idCliente = value; }
         public string NombreCliente { get => nombreCliente; set => nombreCliente = value; }
         public string ApellidosCliente { get => apellidosCliente; set => apellidosCliente = value; }
@@ -36,6 +44,19 @@ namespace ClienteYBancoC_.Dtos
         public string FchAltaCliente { get => fchAltaCliente; set => fchAltaCliente = value; }
         public string FchBajaCliente { get => fchBajaCliente; set => fchBajaCliente = value; }
 
+        /// <summary>
+        /// metodo-constructor con get y set
+        /// amd 211123
+        /// </summary>
+        /// <param name="idCliente"></param>
+        /// <param name="nombreCliente"></param>
+        /// <param name="apellidosCliente"></param>
+        /// <param name="dniCliente"></param>
+        /// <param name="fchNacimientoCliente"></param>
+        /// <param name="emailCliente"></param>
+        /// <param name="tlfCliente"></param>
+        /// <param name="fchAltaCliente"></param>
+        /// <param name="fchBajaCliente"></param>
         public ClienteDto(long idCliente, string nombreCliente, string apellidosCliente, string dniCliente, string fchNacimientoCliente, string emailCliente, int tlfCliente, string fchAltaCliente, string fchBajaCliente)
         {
             this.idCliente = idCliente;
@@ -48,7 +69,18 @@ namespace ClienteYBancoC_.Dtos
             this.fchAltaCliente = fchAltaCliente;
             this.fchBajaCliente = fchBajaCliente;
         }
+
+        /// <summary>
+        /// metodo-constructor por defecto
+        /// amd 211123
+        /// </summary>
         public ClienteDto() { }
+
+        /// <summary>
+        /// metodo ToString
+        /// amd 211123
+        /// </summary>
+        /// <returns>string</returns>
         override
         public string ToString()
         {

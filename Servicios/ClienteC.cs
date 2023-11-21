@@ -15,6 +15,11 @@ namespace ClienteYBancoC_.Servicios
             listaAntigua.Add(cliente);
 
         }
+        /// <summary>
+        /// metodo que crea un nuevo usuario
+        /// amd 211123
+        /// </summary>
+        /// <returns>ClienteDto</returns>
         private ClienteDto crearNuevoCliente()
         {
             ClienteDto nuevoCliente = new ClienteDto();

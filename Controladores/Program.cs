@@ -4,8 +4,17 @@ using ClienteYBancoC_.Servicios;
 
 namespace ClienteYBancoC_
 {
+    /// <summary>
+    /// clase principal
+    /// amd 211123
+    /// </summary>
     class program
     {
+        /// <summary>
+        /// metodo principal
+        /// amd 211123
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             List<ClienteDto> listaClientes = new List<ClienteDto>();
@@ -34,8 +43,9 @@ namespace ClienteYBancoC_
                     case 2: cuenta.darAltaCuenta(listaCuenta); 
                         break; 
                     default:
-                        Console.WriteLine("[INFO] - La opcion seleccionada no coincide con ninguna.");
+                        Console.WriteLine("La opcion seleccionada no coincide con ninguna.");
                         break;
+                       
                 }
 
             }

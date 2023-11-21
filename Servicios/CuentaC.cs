@@ -11,9 +11,14 @@ namespace ClienteYBancoC_.Servicios
     {
         public void darAltaCuenta(List<CuentaDto> listaAntigua)
         {
-            
-            listaAntigua.Add(crearNuevaCuenta());
+            CuentaDto cuenta = crearNuevaCuenta();
+            listaAntigua.Add(cuenta);
         }
+        // <summary>
+        /// metodo que crea una nueva cuenta
+        /// amd 211123
+        /// </summary>
+        /// <returns>CuentaDto</returns>
         private CuentaDto crearNuevaCuenta()
         {
             CuentaDto nuevaCuenta = new CuentaDto();
