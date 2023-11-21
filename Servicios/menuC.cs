@@ -10,10 +10,11 @@ namespace ClienteYBancoC_.Servicios
     {
         public int menuCl()
         {
+            int seleccion;
             Console.WriteLine("0. cerrar");
             Console.WriteLine("1. añadir cliente");
             Console.WriteLine("2. anadir cuenta bancaria");
-            int seleccion = Console.ReadKey(true).KeyChar - ('0');
+            seleccion = Console.ReadKey(true).KeyChar - ('0');
             return seleccion;
         }
     }

@@ -8,7 +8,7 @@ namespace ClienteYBancoC_.Dtos
 {
     internal class CuentaDto
     {
-        int id;
+        int id= 123456789;
         string isban = "ES3900750122705746009420";
         string swift = "CSI1SSXX";
         string fchAltaCliente = "9999/12/31";

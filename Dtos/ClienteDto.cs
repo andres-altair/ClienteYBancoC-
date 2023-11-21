@@ -16,7 +16,7 @@ namespace ClienteYBancoC_.Dtos
 
         string dniCliente = "aaaaa";
 
-        string fchNacimientoCliente = "9999/12/31";
+        string fchNacimientoCliente = "31/12/9999";
 
         string emailCliente = "aaaaa";
 

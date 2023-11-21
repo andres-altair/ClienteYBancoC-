@@ -16,15 +16,20 @@ namespace ClienteYBancoC_
             CuentaI cuenta = new CuentaC();
             
             bool cerrarMenu = false;
-            int recogido = mi.menuCl();
-            
-            while(!cerrarMenu)
+            int recogido;
+
+            while (!cerrarMenu)
             {
+                recogido = mi.menuCl();
                 switch (recogido) 
                 {
                     case 0: cerrarMenu = true; 
                         break;
                     case 1: ci.darAltaCliente(listaClientes);
+                        foreach (ClienteDto cliente in listaClientes)
+                        {
+                            Console.WriteLine(cliente.ToString());
+                        }
                         break;
                     case 2: cuenta.darAltaCuenta(listaCuenta); 
                         break; 

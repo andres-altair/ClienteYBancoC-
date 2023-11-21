@@ -11,7 +11,7 @@ namespace ClienteYBancoC_.Servicios
     {
         public void darAltaCliente(List<ClienteDto> listaAntigua)
         {
-            ClienteDto cliente = new ClienteDto();
+            ClienteDto cliente = crearNuevoCliente();
             listaAntigua.Add(cliente);
 
         }
