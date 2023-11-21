@@ -11,12 +11,13 @@ namespace ClienteYBancoC_.Servicios
     {
         public void darAltaCuenta(List<CuentaDto> listaAntigua)
         {
-            CuentaDto cuenta = crearNuevaCuenta();
-            listaAntigua.Add(cuenta);
+            
+            listaAntigua.Add(crearNuevaCuenta());
         }
         private CuentaDto crearNuevaCuenta()
         {
             CuentaDto nuevaCuenta = new CuentaDto();
+
             Console.WriteLine("escribe tu id");
             nuevaCuenta.Id = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("escribe tu isban");
@@ -24,6 +25,7 @@ namespace ClienteYBancoC_.Servicios
             Console.WriteLine("escribe tu isban");
             Console.WriteLine("Introduzca la fecha de alta: ");
             nuevaCuenta.FchAltaCliente = Console.ReadLine();
+
             return nuevaCuenta; 
         }
 
